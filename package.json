@@ -1,8 +1,7 @@
 {
   "name": "parse-ref-semver",
   "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
@@ -20,5 +19,8 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@vercel/ncc": "^0.38.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
