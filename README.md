@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Parse ref
-        uses: ./.github/actions/parse-ref-semver
+        uses: ryangoree/parse-semver-ref-action@v1
         id: parse
         with:
           ref: ${{ github.ref }}
