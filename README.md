@@ -2,6 +2,36 @@
 
 This action parses a a GitHub ref (e.g. `refs/tags/v1.2.3`) and outputs it's components.
 
+## Usage
+
+```yaml
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse ref
+        uses: ./.github/actions/parse-ref-semver
+        id: parse
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Do something with the parsed ref
+        run: |
+          echo "Major: ${{ steps.parse.outputs.major }}"
+          echo "Minor: ${{ steps.parse.outputs.minor }}"
+          echo "Patch: ${{ steps.parse.outputs.patch }}"
+          echo "Prerelease: ${{ steps.parse.outputs.prerelease }}"
+          echo "Build: ${{ steps.parse.outputs.build }}"
+          echo "Name: ${{ steps.parse.outputs.name }}"
+          echo "Scope: ${{ steps.parse.outputs.scope }}"
+```
+
 ## Inputs
 
 ### `ref` _(Required)_
