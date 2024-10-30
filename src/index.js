@@ -14,7 +14,7 @@ try {
    *   "scope", "name")
    * - allows an optional leading "v" character before the major version. (e.g. "v1.0.0")
    *
-   * https://regex101.com/r/wYU2v8/1
+   * https://regex101.com/r/LmluWK/2
    */
   const match = ref.match(
     /^([^@\s]+\/)?((@([^\/\s]*))?\/?([^\s]+)@)?v?(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/
