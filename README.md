@@ -1,6 +1,6 @@
 # parse-semver-ref-action
 
-This action parses a a GitHub ref (e.g. `refs/tags/v1.2.3`) and outputs it's components.
+This action parses a GitHub ref (e.g. `refs/tags/v1.2.3`) and outputs it's components.
 
 ## Usage
 
